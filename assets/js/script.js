@@ -49,7 +49,10 @@ function sendAlert() {
 }
 
 // Handling the SOS button
-const sosButton = document.getElementById('sos-button');
+const sosButton = document.querySelector('.sos-button');
+// access_btn.addEventListener('click', getLocation);
+
+// const sosButton = document.getElementById('sos-button');
 sosButton.addEventListener('click', () => {
     sendAlert(); // Call the function to send the alert
     alert('SOS alert sent!');
