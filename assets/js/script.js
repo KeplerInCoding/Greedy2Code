@@ -41,8 +41,8 @@ const client = new twilio('AC86fb0f6a3d35c98743bb5872e4337d7a', 'edb03f020d9f0a8
 function sendAlert() {
   client.messages.create({
     body: 'This is an emergency alert!',
-    from: '<YOUR_TWILIO_PHONE_NUMBER>', // Your Twilio phone number
-    to: '+1234567890+13367927626', // Replace with the recipient's phone number
+    from: '+13367927626', // Your Twilio phone number
+    to: '+918590353387', // Replace with the recipient's phone number
   })
   .then(message => console.log(`Alert sent with SID: ${message.sid}`))
   .catch(error => console.error(`Error sending alert: ${error.message}`));
