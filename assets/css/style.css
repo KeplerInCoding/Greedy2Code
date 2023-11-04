@@ -373,13 +373,13 @@ body {
 
 .hero .section-subtitle { margin-bottom: 15px; }
 
-.hero-title {
+.hero-title-updated {
   color: var(--oxford-blue);
   font-size: var(--fs-1);
   font-family: var(--ff-abril-fatface);
   font-weight: var(--fw-500);
   line-height: 1.2;
-  max-width: 11ch;
+  max-width: 16ch;
   margin-bottom: 15px;
 }
 
