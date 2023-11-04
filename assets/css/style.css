@@ -470,6 +470,7 @@ body {
   font-size: var(--fs-8);
   padding: 5px 8px;
   border-radius: var(--radius-6);
+  display: inline;
 }
 
 .popular-card .card-price { background: var(--viridian-green); }
@@ -1030,4 +1031,11 @@ body {
 
   .about .container { grid-template-columns: 0.7fr 1fr; }
 
+}
+.qr{
+  width: 120px; /* Adjust the width to your desired size */
+    height: 120px; 
+    position: relative;
+    margin-left: 233px;
+    /* margin-top: 110px; */
 }
