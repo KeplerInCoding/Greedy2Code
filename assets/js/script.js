@@ -1,59 +1,39 @@
 'use strict';
 
 /**
- * navbar toggle
+ * Add a click event listener to the SOS button
  */
+const sosButton = document.getElementById('sos-button');
 
-const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
-const header = document.querySelector("[data-header]");
-
-navToggleBtn.addEventListener("click", function () {
-  this.classList.toggle("active");
-  header.classList.toggle("active");
+sosButton.addEventListener('click', () => {
+    sendSms();
 });
-
-
 
 /**
- * show go top btn when scroll window to 500px
+ * Function to send an SMS
  */
+function sendSms() {
+    const phoneNumber = '+918590353387'; // Replace with the recipient's phone number
+    const message = 'This is an emergency alert!';
 
-const goTopBtn = document.querySelector("[data-go-top]");
-
-window.addEventListener("scroll", function () {
-  window.scrollY >= 500 ? goTopBtn.classList.add("active")
-    : goTopBtn.classList.remove("active");
-});
-
-
-
-
-
-// alert sms
-
-// Import the Twilio module
-const twilio = require('twilio');
-
-// Initialize Twilio client with your Account SID and Auth Token
-const client = new twilio('AC86fb0f6a3d35c98743bb5872e4337d7a', 'edb03f020d9f0a83a2355ff4f25df607');
-
-// Define a function to send an SMS alert
-function sendAlert() {
-  client.messages.create({
-    body: 'This is an emergency alert!',
-    from: '+13367927626', // Your Twilio phone number
-    to: '+918590353387', // Replace with the recipient's phone number
-  })
-  .then(message => console.log(`Alert sent with SID: ${message.sid}`))
-  .catch(error => console.error(`Error sending alert: ${error.message}`));
+    fetch('/send-sms', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ phoneNumber, message }),
+    })
+    .then((response) => {
+        if (response.status === 200) {
+            return response.json();
+        } else {
+            throw new Error('Failed to send SMS');
+        }
+    })
+    .then((data) => {
+        alert('SOS alert sent!');
+    })
+    .catch((error) => {
+        console.error('Error sending SOS alert:', error);
+    });
 }
-
-// Handling the SOS button
-const sosButton = document.querySelector('.sos-button');
-// access_btn.addEventListener('click', getLocation);
-
-// const sosButton = document.getElementById('sos-button');
-sosButton.addEventListener('click', () => {
-    sendAlert(); // Call the function to send the alert
-    alert('SOS alert sent!');
-});
