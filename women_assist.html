@@ -1,32 +1,43 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPS Tracking & Alert System</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    
+    <title>GPS Alert System</title>
+    <!-- Include Tailwind CSS CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <header>
-        <h1>GPS Tracking & Alert System</h1>
-    </header>
-    <main>
-        <section class="tracking-section">
-            <h2>GPS Tracking</h2>
-            <p>Current Location: <span id="current-location">Loading...</span></p>
-        </section>
-        <section class="alert-settings-section">
-            <h2>Alert Settings</h2>
-            <label for="route-deviation-threshold">Route Deviation Threshold (meters):</label>
-            <input type="number" id="route-deviation-threshold">
-            <button id="save-settings-button">Save Settings</button>
-        </section>
-        <section class="sos-button-section">
-            <h2>SOS Button</h2>
-            <button id="sos-button">Activate SOS</button>
-        </section>
-    </main>
+<body  class="bgimg min-h-screen flex items-center justify-center ">
+    <div class="w-4/5 sm:w-2/5 bg-white bg-opacity-80 p-8 rounded shadow-md text-center">
+        <!-- SOS Section -->
+        <div class="border-b-2 border-red-500 pb-4 mb-4">
+            <h2 class="text-2xl  font-extrabold mb-2">You're Never Alone</h2>
+            <h2 class="text-2xl font-extrabold mb-2">We're with You Every Step of the Way</h2>
+            <br>
+            <div class="text-black">
+                <button class="bg-red-500 text-3xl font-extrabold p-5 mb-3 rounded-full hover:bg-red-400">SOS</button>
+                <p class="mb-2 font-extrabold">Send Alerts to Your Contacts</p>
+                <p class="mb-2 font-extrabold">Quick Response for Help</p>
+            </div>
+        </div>
+
+        <!-- Real-Time Tracking Section -->
+        <div>
+            <h2 class="text-2xl font-extrabold text-green-800 mb-2">Real-Time GPS Route Tracking</h2>
+            <div class="text-black">
+                <p class="mb-2">Automatic Alerts for Route Changes</p>
+                <button class="bg-indigo-500 text-xl font-extrabold p-5 mb-3 rounded-full hover:bg-indigo-400">Start Tracking</button>
+                <button class="bg-indigo-500 text-xl font-extrabold p-5 mb-3 rounded-full hover:bg-indigo-400">Stop Tracking</button>
+                <p>Immediate Notifications</p>
+            </div>
+        </div>
+    </div>
+    <style>
+        .bgimg{
+            background-image: url('/assets/images/map_bg.jpg');
+        }
+    </style>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
