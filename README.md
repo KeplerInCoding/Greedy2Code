@@ -16,9 +16,9 @@
 
 
 
-# TravelAssist - Your Trusted Travel Companion
+# VRsecure - Embark on a beautiful journey where safety,meets serenity!
 
-Welcome to TravelAssist, your go-to platform for safe and enjoyable travel experiences, especially in remote and unfamiliar destinations. Whether you're a solo traveler, a family with children, a senior explorer, or a specially-abled adventurer, we've got you covered.
+ Your go-to platform for safe and enjoyable travel and stay experiences, especially in remote and unfamiliar destinations. Whether you're a solo traveler, a family with children, a senior explorer, or a specially-abled adventurer, we've got you covered.
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -34,7 +34,7 @@ Welcome to TravelAssist, your go-to platform for safe and enjoyable travel exper
 
 ## Introduction
 
-TravelAssist is designed to make your journeys safer, more convenient, and memorable. We offer a range of services to address the unique challenges faced by travelers of all demographics.
+VRsecure is designed to make your journeys safer, more convenient, and memorable. We offer a range of services to address the unique challenges faced by travelers of all demographics.
 
 ## Key Features
 
@@ -44,7 +44,7 @@ TravelAssist is designed to make your journeys safer, more convenient, and memor
   - SOS button for immediate assistance.
 
 - **Virtual Reality (VR) Tours:**
-  - Explore travel destinations before your journey.
+  - Explore the hotels, hostel's ,pg's , etc. in virtual reality to have a better understanding and immersive experience.
   - Custom VR views for businesses and establishments.
 
 - **Travel Recommendations and Assistance:**
