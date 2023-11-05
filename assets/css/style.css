@@ -471,7 +471,6 @@ body {
   padding: 5px 8px;
   border-radius: var(--radius-6);
   display: inline;
-  height: 10px;
 }
 
 .popular-card .card-price { background: var(--viridian-green); }
